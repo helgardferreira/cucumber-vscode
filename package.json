@@ -2,7 +2,7 @@
   "name": "helgard-cucumber-unofficial",
   "displayName": "Cucumber Unofficial",
   "description": "This is a fork of the existing Cucumber plugin for Visual Studio Code - only use this in the meanwhile while upstream gets updated",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "publisher": "helgardrichard",
   "engines": {
     "vscode": "^1.82.0"
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/cucumber/vscode.git"
+    "url": "git://github.com/helgardferreira/cucumber-vscode.git"
   },
   "icon": "images/icon.png",
   "main": "./out/extension.js",
@@ -94,15 +94,13 @@
     "eslint": "eslint src --ext ts",
     "eslint-fix": "eslint src --ext ts --max-warnings 0 --fix",
     "test": "node ./dist/src/test/runTest.js",
-    "prepublishOnly": "npm run update-settings-docs",
-    "update-settings-docs": "./scripts/update-settings-docs.sh",
+    "prepublishOnly": "npm run build",
     "vscode-types-compatible": "./scripts/vscode-types-compatible.sh",
     "package": "vsce package",
     "publish": "vsce publish",
     "upgrade": "npm-check-updates --upgrade"
   },
   "lint-staged": {
-    "README.md": "npm run update-settings-docs",
     "src/**/*.ts": "npm run eslint-fix"
   },
   "dependencies": {

@@ -1,17 +1,6 @@
-# Cucumber for Visual Studio Code
+# UNOFFICIAL Cucumber for Visual Studio Code
 
-![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/CucumberOpen.cucumber-official)
-![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/CucumberOpen.cucumber-official)
-![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/CucumberOpen.cucumber-official)
-![Visual Studio Marketplace Rating (Stars)](https://img.shields.io/visual-studio-marketplace/stars/CucumberOpen.cucumber-official)
-[![build](https://github.com/cucumber/vscode/actions/workflows/build.yaml/badge.svg)](https://github.com/cucumber/vscode/actions/workflows/build.yaml)
-
-This extension adds support for using Cucumber with Visual Studio Code, powered by the [Cucumber Language Server](https://github.com/cucumber/language-server#readme).
-
-Available from the [Open VSX Registry](https://open-vsx.org/extension/CucumberOpen/cucumber-official) and
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=CucumberOpen.cucumber-official).
-
-This extension is maintained by the [Cucumber team](https://github.com/cucumber/).
+This extension is a fork of the current Cucumber extension for Visual Studio Code. Only use this in the interim while upstream is being updated: [Cucumber team](https://github.com/cucumber/).
 
 ## Features
 
@@ -56,7 +45,7 @@ You can quickly navigate from a Gherkin step to a step definition.
 Generate step definition snippets with a quick fix - `⌘` + `.` (MacOS) or
 `Ctrl` + `.` (Windows).
 
-*IMPORTANT*: Generate step definition will only be enabled
+_IMPORTANT_: Generate step definition will only be enabled
 if there is at least one existing step definition. This is
 so that the extension can determine the programming language
 for the step definition, and provide choices for existing files
@@ -113,7 +102,8 @@ With multi-root workspaces, you will need to either specify glob paths for each 
 
 ### `cucumber.features`
 
-[//]: # (<cucumber.features>)
+[//]: # '<cucumber.features>'
+
 The `cucumber.features` setting overrides where the extension
 should look for `.feature` files.
 
@@ -133,11 +123,12 @@ Default value:
 }
 ```
 
-[//]: # (</cucumber.features>)
+[//]: # '</cucumber.features>'
 
 ### `cucumber.glue`
 
-[//]: # (<cucumber.glue>)
+[//]: # '<cucumber.glue>'
+
 The `cucumber.glue` setting overrides where the extension
 should look for source code where step definitions and
 parameter types are defined.
@@ -168,11 +159,12 @@ Default value:
 }
 ```
 
-[//]: # (</cucumber.glue>)
+[//]: # '</cucumber.glue>'
 
 ### `cucumber.parameterTypes`
 
-[//]: # (<cucumber.parameterTypes>)
+[//]: # '<cucumber.parameterTypes>'
+
 Override the `cucumber.parameterTypes` setting if your Cucumber Expressions
 are using [Custom Parameter Types](https://github.com/cucumber/cucumber-expressions#custom-parameter-types) that are defined outside your `cucumber.glue` setting.
 
@@ -188,17 +180,10 @@ Default value:
 
 For example, if you're using the `actor` parameter type from [@cucumber/screenplay](https://github.com/cucumber/screenplay.js#actors) you'll have to declare this in the `parameterTypes` setting:
 
-````json
+```json
 {
-  "cucumber.parameterTypes": [
-    { "name": "actor", "regexp": "[A-Z][a-z]+" }
-  ]
+  "cucumber.parameterTypes": [{ "name": "actor", "regexp": "[A-Z][a-z]+" }]
 }
-````
+```
 
-[//]: # (</cucumber.parameterTypes>)
-
-## Feedback
-
-If you discover a bug, or have a suggestion for a feature request, please
-submit an [issue](https://github.com/cucumber/vscode/issues).
+[//]: # '</cucumber.parameterTypes>'
