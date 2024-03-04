@@ -1,4 +1,4 @@
-import { startEmbeddedServer } from '@cucumber/language-server/wasm'
+import { startEmbeddedServer } from '@helgardf/cucumber-language-server/wasm'
 import vscode from 'vscode'
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient/node'
 

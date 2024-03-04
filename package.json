@@ -1,9 +1,9 @@
 {
-  "name": "cucumber-official",
-  "displayName": "Cucumber",
-  "description": "Cucumber for Visual Studio Code",
+  "name": "helgard-cucumber-unofficial",
+  "displayName": "Cucumber Unofficial",
+  "description": "This is a fork of the existing Cucumber plugin for Visual Studio Code - only use this in the meanwhile while upstream gets updated",
   "version": "1.8.1",
-  "publisher": "CucumberOpen",
+  "publisher": "helgardrichard",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -89,7 +89,7 @@
     "build": "npm run esbuild-extension",
     "compile": "tsc --build",
     "prepare": "husky install && npm run copy-wasms",
-    "copy-wasms": "mkdir -p out && cp node_modules/@cucumber/language-service/dist/*.wasm out",
+    "copy-wasms": "mkdir -p out && cp node_modules/@helgardf/cucumber-language-service/dist/*.wasm out",
     "pretest": "npm run compile",
     "eslint": "eslint src --ext ts",
     "eslint-fix": "eslint src --ext ts --max-warnings 0 --fix",
@@ -106,7 +106,7 @@
     "src/**/*.ts": "npm run eslint-fix"
   },
   "dependencies": {
-    "@cucumber/language-server": "1.4.0",
+    "@helgardf/cucumber-language-server": "^1.4.1",
     "vscode-languageclient": "9.0.1"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import { Files } from '@cucumber/language-server'
+import { Files } from '@helgardf/cucumber-language-server'
 import { FileSystem, Uri, workspace } from 'vscode'
 
 export class VscodeFiles implements Files {

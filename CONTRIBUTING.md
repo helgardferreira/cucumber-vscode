@@ -53,7 +53,7 @@ This extension uses the _Language Server Protocol_ to communicate with Visual St
 
     ```console
     npm install
-    npm link @cucumber/language-service
+    npm link @helgardf/cucumber-language-service
     npm link
     npm run build
     ```
@@ -62,7 +62,7 @@ This extension uses the _Language Server Protocol_ to communicate with Visual St
 
     ```console
     npm install
-    npm link @cucumber/language-server
+    npm link @helgardf/cucumber-language-server
     ```
 
 4. Now open the extension repository in Visual Studio Code.
